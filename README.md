@@ -223,4 +223,4 @@ FF-55-01-03-00-04-CB-00-00-00-00-00-24-00-00-00-27-00-00-00-00-00-14-00-00-2B-35
 ### Fork / Reference
 You can view the tested changes in my fork here: `<ВСТАВЬТЕ_ССЫЛКУ_НА_ВАШ_ФОРК>`
 
-All entities (voltage, current, power, energy, capacity, temperature, runtime, D+/D-) decode properly and update without parser errors.
+All entities (voltage, current, power, energy, capacity, temperature, runtime) decode properly and update without parser errors.
