@@ -63,7 +63,7 @@ _LOGGER = logging.getLogger(__name__)
 # advertisements down to this exact local_name, double-check at the
 # config-flow boundary so a future matcher loosening can't silently
 # create entries for the wrong device family.
-EXPECTED_LOCAL_NAME = "UC96_BLE"
+EXPECTED_LOCAL_NAMES = "UC96_BLE", "B50_BLE"
 
 
 class AtorchBleConfigFlow(ConfigFlow, domain=DOMAIN):
