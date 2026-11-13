@@ -6,6 +6,11 @@
       "local_name": "UC96_BLE",
       "service_uuid": "0000ffe0-0000-1000-8000-00805f9b34fb",
       "connectable": true
+    },
+    {
+      "local_name": "B50_BLE",
+      "service_uuid": "0000ffe0-0000-1000-8000-00805f9b34fb",
+      "connectable": true
     }
   ],
   "codeowners": ["@dallanwagz"],
