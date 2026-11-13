@@ -221,6 +221,6 @@ FF-55-01-03-00-04-CB-00-00-00-00-00-24-00-00-00-27-00-00-00-00-00-14-00-00-2B-35
 2. Updated `config_flow.py` to accept `B50_BLE` alongside `UC96_BLE` and format the default device title as `Atorch B50 (<MAC_LAST4>)`.
 
 ### Fork / Reference
-You can view the tested changes in my fork here: `<[(https://github.com/Maker39/j7c_ha])>`
+You can view the tested changes in my fork here: `<https://github.com/Maker39/j7c_ha>`
 
 All entities (voltage, current, power, energy, capacity, temperature, runtime) decode properly and update without parser errors.
