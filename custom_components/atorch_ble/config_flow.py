@@ -120,7 +120,9 @@ class AtorchBleConfigFlow(ConfigFlow, domain=DOMAIN):
 
         normalized_mac = format_mac(discovery_info.address)
         last4_upper = normalized_mac.replace(":", "")[-4:].upper()
-        title = f"Atorch J7-C ({last4_upper})"
+        model = "B50" if discovery_info.name == "B50_BLE" else "J7-C"
+        title = f"Atorch {model} ({last4_upper})"
+
 
         if user_input is not None:
             return self.async_create_entry(
