@@ -198,3 +198,29 @@ Documentation of the Atorch BLE protocol that informed this work:
 ## License
 
 [MIT](LICENSE)
+
+### Summary
+I have tested this integration with an **Atorch B50** meter and confirmed that it works out of the box once its BLE local name (`B50_BLE`) is allowed in the discovery matchers.
+
+### Device & Protocol Details
+* **Device Model:** Atorch B50
+* **Advertised Local Name:** `B50_BLE`
+* **GATT Service UUID:** `0000ffe0-0000-1000-8000-00805f9b34fb`
+* **Notification Characteristic:** `0000ffe1-0000-1000-8000-00805f9b34fb`
+* **Packet Type:** `0x03` (same frame layout as J7-C / UC96)
+
+### Raw Notification Sample
+Here is a real notification frame captured from the device:
+```text
+FF-55-01-03-00-04-CB-00-00-00-00-00-24-00-00-00-27-00-00-00-00-00-14-00-00-2B-35-3C-13-88-00-00-02-8A-00-B0
+```
+*Voltage: 12.27 V, Current: 0.000 A, Capacity: 36 mAh, Energy: 0.39 Wh, Temp: 20 °C.*
+
+### Changes Tested
+1. Added `B50_BLE` matcher to `manifest.json` (`bluetooth` list).
+2. Updated `config_flow.py` to accept `B50_BLE` alongside `UC96_BLE` and format the default device title as `Atorch B50 (<MAC_LAST4>)`.
+
+### Fork / Reference
+You can view the tested changes in my fork here: `<ВСТАВЬТЕ_ССЫЛКУ_НА_ВАШ_ФОРК>`
+
+All entities (voltage, current, power, energy, capacity, temperature, runtime, D+/D-) decode properly and update without parser errors.
