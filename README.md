@@ -199,7 +199,7 @@ Documentation of the Atorch BLE protocol that informed this work:
 
 [MIT](LICENSE)
 
-### Summary
+### Maker39 Fork Summary
 I have tested this integration with an **Atorch B50** meter and confirmed that it works out of the box once its BLE local name (`B50_BLE`) is allowed in the discovery matchers.
 
 ### Device & Protocol Details
