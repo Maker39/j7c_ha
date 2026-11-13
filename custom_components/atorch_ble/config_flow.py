@@ -95,7 +95,7 @@ class AtorchBleConfigFlow(ConfigFlow, domain=DOMAIN):
         # canonical UC96_BLE local name. The manifest matcher should
         # already filter these out, but a future matcher loosening
         # shouldn't be able to leak the wrong family in.
-        if discovery_info.name != EXPECTED_LOCAL_NAME:
+                if discovery_info.name not in EXPECTED_LOCAL_NAMES:
             integration = await async_get_integration(self.hass, DOMAIN)
             return self.async_abort(
                 reason="not_supported_device",
